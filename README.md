@@ -12,6 +12,42 @@
 
 1. 가비지 콜렉션에 대해 설명할수있나요?
 
+### Algorithm
+1. 선택정렬을 설명하고, 코드로 구현해보세요
+```java
+public static void selectionSort(int[] arr, int start) {
+
+   if(start < arr.length - 1) {
+      int min_index = 0;
+      for(int i = start ; i < arr.length -1 ; i++) {
+          if(arr[i] < arr[min_index]) {
+             min_index = i;
+          }
+      }
+      swap(arr, start, min_index);
+      selectionSort(arr, start + 1);
+   }
+
+}
+
+```
+
+2. 버블정렬을 설명하고, 코드로 구현해보세요.
+```java
+public static void bubbleSort(int[] arr, int last) {
+
+if(last > 0) {
+   for (int i = 1 ; i <= last ; i++) {
+       if(arr[i-1] > arr[i]) {
+            swap (arr, i-1, i);
+       }
+   }
+   bubbleSort(arr, last -1);
+}
+
+}
+```
+
 ### DB
 1. 데이터베이스에서 인덱스에 대해 설명해주세요
 
