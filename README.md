@@ -19,7 +19,7 @@ public static void selectionSort(int[] arr, int start) {
 
    if(start < arr.length - 1) {
       int min_index = 0;
-      for(int i = start ; i < arr.length -1 ; i++) {
+      for(int i = start ; i < arr.length  ; i++) {
           if(arr[i] < arr[min_index]) {
              min_index = i;
           }
