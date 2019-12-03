@@ -137,8 +137,13 @@ START_REDELIVER_INTENT : 서비스 강제종료시, 시스템이 서비스를 �
 하나의 액티비티는 여러개의 프래그먼트를 포함할수있고, 하나의 프레그먼트는 여러 액티비티에서 재사용될수있습니다.
 ```
 
-21. Bundle과 Parcel의 차이점은 무엇인가요?
+21. Bundle은 무엇인가요?
 ```
+인탠트 간에 데이터를 전달하는 holder입니다.
+액티비티의 UI 등 상태정보를 가지고있어 복원할떄 oncreate에 전달되어 사용됩니다.
+메모리 부족이나 회전시 사용됩니다.
+onSaveInstanceState() : onPause() 이전 또는 이후에 호출된다.
+onRestoreInstanceState() : onStart() 이후에 호출된다.
 ```
 
 22. ANR이란?
