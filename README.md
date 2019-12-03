@@ -147,6 +147,21 @@ if(last > 0) {
 }
 ```
 
+3. 이진트리와 종류에 대해 설명해보세요
+```
+Binary tree는 child가 최대 2개까지 생성가능한 트리입니다.
+Completed Binary tree, Full binary tree, Perfect Binary Tree 세 종류가 있습니다.
+Completed Binary tree는 이진트리의 마지막 레벨이 왼쪽부터 차례대로 체워지는경우입니다.
+Full binary tree는 child가 2개이거나, 아예없거나 둘중의 하나인경우 tree입니다.
+Perfect Binary Tree는 피라미드형 구조로, 노드는 레벨을 n이라고 했을때 2^n-1개 가지고있는 트리입니다.
+```
+
+4. 이진검색트리를 설명하고, 구현해보세요
+```java
+노드를 기준으로 값이 나뉘어져있습니다.
+왼쪽 child는 부모보다 값이 작고, 오른쪽 child는 부모노드보다 값이 큽니다.
+```
+
 ### SW (Software)
 1. 각 개발론에 대해 설명해보세요
 ```
