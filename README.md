@@ -1,6 +1,14 @@
 # manual-job
 직무 면접 및 시험 대비용  
 
+### Android
+1. 자바와 코틀린의 차이는?
+
+2. 안드로이드 4대 컴포넌트는?
+```java
+액티비티, 서비스, 브로드 캐스트, 컨텐츠 프로바이더입니다.
+```
+
 ### java
 1. 클래스와 오브젝트의 차이는 뭐죠?
 
@@ -12,7 +20,7 @@
 
 1. 가비지 콜렉션에 대해 설명할수있나요?
 
-### Algorithm
+### Algorithm & Data Structure
 1. 선택정렬을 설명하고, 코드로 구현해보세요
 ```java
 public static void selectionSort(int[] arr, int start) {
