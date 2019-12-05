@@ -3,6 +3,11 @@ Job interviews and exam preparation
 
 ### Android
 1. Java와 Kotiln의 차이는?
+```
+null에 안전합니다.
+$원표시를 통해 변수를 println에서 string으로 표현가능합니다.
+annotation을 통해 자바와 호환가능한점입니다.
+```
 
 2. Android 4대 Component는?
 ```
@@ -158,7 +163,18 @@ this는 항상 현재 클래스의 객체를 가리킵니다. app context는 전
 app context는 하나만 존재하므로 앱이 동작하는동안 컨트롤하려면 app context를 사용하고 그 외에는 this를 사용합니다.
 ```
 
+24. App Bundle은 무엇인가요?  
+```
+App Bundle은 각 사용자가 필요한 리소스만 선택해서 빌드하는 방식으로 앱의 크기를 줄일 수 있는 기술
+```
 
+25. UNIT 테스트에 대해 설명해보세요
+```
+```
+
+26. MVVM(model-view-viewmodel)와 MVP(model-view-presenter)는?
+```
+```
 
 
 ### java
