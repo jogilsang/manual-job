@@ -214,6 +214,30 @@ QA팀에서 하는걸로 알고있습니다.
 ```
 try/catch 블록과 함께사용되며, 예외유무와 관계없이 원래의 제어흐름으로 돌아가기전 
 무조건 실행됩니다
+
+***finally를 사용하는 이유는 자동으로 close하기 위해서이다.
+하지만, 최근에는 try with resources가 추가됬기때문에, javadoc을 보면 autoclosing이있는 Exception이 있다.
+```
+
+5.1 Error와 Exception의 뜻, 정의
+```
+Error는 프로그래머가 처리할수 없는 것으로 스택오버플로우 등이 있다.
+Exception는 프로그래머가 제어할수있는 오류이다.
+컴파일 오류(Compile Error)와 실행 오류(Runtime Error)이다.
+Exception은 예외처리를 통해, 프로그램의 비정상 종료를 막고 log를 남기는것이다.
+Exception의 예시로는 ArithmeticExceoption(산술오류), IOException, NullPointerException(Null 객체사용) 등이있다.
+```
+
+5.2 throw와 throws의 차이
+```
+throw는 예외를 발생시키는 것. throw new exception();
+throws는 예외를 미루는 것으로, 발생한 메소드가 아니라 호출한 곳에서 예외처리를 하게하는것으로 JVM에서 처리하게됨
+```
+
+5.3 사용자 정의 예외처리를 만드는 법
+```
+Exception class를 상속받은뒤 생성자에 message를 parameter로 받아서, super 메소드로 던지게 구현한다.
+정의한 예외가 발생할경우, throw new Exceptionclass(message)을 통해 예외처리한다.
 ```
 
 6. finalize 메서드
