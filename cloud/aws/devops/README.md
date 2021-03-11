@@ -19,3 +19,9 @@ Stack은 Cloudformation에서 하나의 단위로 관리할 수 있는 AWS리소
 Template은 JSON 또는 YAML 형식으로, 스택에서 프로비저닝할 리소스를 설명하는 파일이다.
 ```
 
+- Template 의 구성요소는>
+```
+Resources 섹션과 Output 섹션이 있다.
+Resources 섹션은 스택에 포함할 인스턴스나 버킷 등의 AWS리소스 속성값 등을 기입해야되는 필수항목이다. 
+Outputs 섹션은 스택생성 혹은 템플릿 실행 결과값을 받을 수 있다.
+```
