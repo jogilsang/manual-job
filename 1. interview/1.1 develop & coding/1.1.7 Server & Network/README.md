@@ -5,6 +5,7 @@
 3. Web서버와 WAS의 종류와 특징은?(#p3)
 4. WAS의 정의와 Web서버와의 차이는?(#p4)
 5. 각 OSI Layer 계층별 특징은?(#p5)
+6. 서버의 응답값?(#p6)
 
 ---
 
@@ -72,6 +73,23 @@ WAS는 웹서버와 웹 컨테이너가 결합된것으로, Web서버가 정적�
 
 Application 계층
 TCP/TP 프로그래밍을 통해 사용자가 생성할 수 있다.
+```
+
+---
+
+## 6. 서버의 응답값은 ?
+#### p6
+```
+1xx: Informational - Request received, continuing process
+정보 - 요청을 받음, 계속 진행
+2xx: Success - The action was successfully received, understood, and accepted
+성공 - 서버가 요청을 성공적으로 처리했음
+3xx: Redirection - Further action must be taken in order to complete the request
+리다이렉션 - 요청이 완수되기 위해서 추가적인 동작이 이뤄져야 함
+4xx: Client Error - The request contains bad syntax or cannot be fulfilled
+클라이언트 에러 - 요청에 잘못된 문법이 포함되었거나 제대로 만족시키지 못함
+5xx: Server Error - The server failed to fulfill an apparently valid request
+서버 에러 : 서버가 유효한 요청을 수행하는데 실패했음
 ```
 
 ---
