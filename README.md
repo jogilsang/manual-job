@@ -1,5 +1,5 @@
 # manual-job
-Job interviews and exam preparation  
+Develop study and job interview preparation
 
 # INDEX
 ## 1. interview
