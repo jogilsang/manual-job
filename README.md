@@ -26,7 +26,7 @@ Develop study and job interview preparation
 
 ---
 
-## 3. tech_blog
+## 3. reference
 
 ---
 
