@@ -6,6 +6,9 @@
 4. WAS의 정의와 Web서버와의 차이는?(#p4)
 5. 각 OSI Layer 계층별 특징은?(#p5)
 6. 서버의 응답값?(#p6)
+7. Connection Pool(#p7)
+8. TIME_WAIT와 TCP_Slow_start(#p8)
+9. http1.0과 http1.1에서의 keep-alive 사용법(#p9)
 
 ---
 
@@ -94,10 +97,55 @@ TCP/TP 프로그래밍을 통해 사용자가 생성할 수 있다.
 
 ---
 
+## 7. Connection Pool ?
+#### p7
+```
+커넥션 풀에 객체를 할당한다.
+요청이 올 경우, 할당된 객체가 있으면 할당받는다.
+connection pool이 너무 크다면, 메모리 낭비가 심해진다
+요청이 올 경우, 할당된 객체가 없다면 대기한다.
+따라서 connection pool이 너무 작으면, 대기하는 요청이 많아진다.
+적절한 크기로 조정한다.
+```
+
+---
+
+## 8. TIME_WAIT와 TCP_Slow_start
+#### p8
+```
+connection이 close 되면, time_wait 발생한다.
+기존에 connection됬던 IP주소와 포트번호를 메모리에 저장한다.
+발생하는 이유는 같은 IP주소와 포트번호를 사용하는 TCP Connection 생성을 막기위해서다.
+결과적으로 포트고갈과 서버부하를 막는다.
+
+TCP_Slow_start는 패킷전송량의경우, Connection 생성시간에 영향을 받는다.
+```
+
+---
+
+## 9. http1.0과 http1.1에서의 keep-alive 사용법
+#### p9
+```
+http/1.0 에서는 Request headers에 Connection : keep-alive 항목을 표기한다.
+서버는 Response Headers로 Keep-alive : timeout=5, max=100 등을 반환한다.
+클라이언트가 커넥션을 동일하게쓰고싶다면, 동일한 헤더를 사용한다.
+이 때, 정확한 Content-length와 멀티파트 형식이 중요하다.
+시작과 끝이 다르면, 다른 헤더이기때문이다.
+HTTP/1.1에는 빠져있지만, HTTP/1.0을 지원해야되기때문에 구현해야한다.
+
+HTTP/1.1은 지속커넥션이다.
+끊으려면, Connection:close를 헤더에 명시하면된다.
+클라이언트와 서버는 언제든지 header없이 끊을수있다.
+```
+
+---
+
 ## Reference
 [[10분 테코톡] 👩‍🦰희봉의 웹서버 vs WAS](https://youtu.be/NyhbNtOq0Bc).
 
 [[10분 테코톡] 🔮 히히의 OSI 7 Layer](https://youtu.be/1pfTxp25MA8).
 
 [[10분 테코톡] 🎙티거의 Web server vs WAS](https://youtu.be/F_vBAbjj4Pk).
+
+[[10분 테코톡] 🍪쿠기의 Connection Pool & Keep-Alive](https://youtu.be/MBgEhSUOlXo).
 
