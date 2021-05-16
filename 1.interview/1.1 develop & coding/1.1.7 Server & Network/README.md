@@ -1,15 +1,15 @@
 ## Network
 ### 목차
-1. OSI 7 Layer란 무엇인가?(#p1)
-2. Web이란 무엇인가?(#p2)
-3. Web서버와 WAS의 종류와 특징은?(#p3)
-4. WAS의 정의와 Web서버와의 차이는?(#p4)
-5. 각 OSI Layer 계층별 특징은?(#p5)
-6. 서버의 응답값?(#p6)
-7. Connection Pool(#p7)
-8. TIME_WAIT와 TCP_Slow_start(#p8)
-9. http1.0과 http1.1에서의 keep-alive 사용법(#p9)
-10.
+1. [OSI 7 Layer란 무엇인가?](#p1)
+2. [Web이란 무엇인가?](#p2)
+3. [Web서버와 WAS의 종류와 특징은?](#p3)
+4. [WAS의 정의와 Web서버와의 차이는?](#p4)
+5. [각 OSI Layer 계층별 특징은?](#p5)
+6. [서버의 응답값?](#p6)
+7. [Connection Pool](#p7)
+8. [TIME_WAIT와 TCP_Slow_start](#p8)
+9. [http1.0과 http1.1에서의 keep-alive 사용법](#p9)
+10. [Latency와 bandwidth란? 그리고 웹 성능을 높이려면?](#p10)
 
 ---
 
