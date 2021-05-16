@@ -9,7 +9,7 @@
 7. Connection Pool(#p7)
 8. TIME_WAIT와 TCP_Slow_start(#p8)
 9. http1.0과 http1.1에서의 keep-alive 사용법(#p9)
-10.
+10. Latency와 bandwidth란? 그리고 웹 성능을 높이려면?(#p10)
 
 ---
 
