@@ -12,6 +12,7 @@
 10. [Latency와 bandwidth란? 그리고 웹 성능을 높이려면?](#p10)
 11. [Loadbalancer의 분배방식과 특징은?](#p11)
 12. [Sticky Session과 Session Clustering의 의미와 차이는?](#p12)
+13. [JSESSIONKEY란?](#p13)
 
 ---
 
@@ -189,6 +190,21 @@ Session Clustering은 여러 WAS의 세션을 동일한 세션으로 관리하�
 - Cluster로 하나로 관리하는 것
 새로운 서버가 하나 뜰때마다 새로운 서버의 IP/PORT를 입력해서, 클러스터링 해줘야한다.
 Redis를 이용해서 진행가능하다.
+```
+---
+
+## 13. JSESSIONKEY ?
+#### p13
+```
+웹 브라우저에서 사용중인 서비스에 대한 로그인을 한 뒤, 자유롭게 이용할 수 있는것은 바로 세션이 유지되기때문이다.
+세션이 유지된다는 건, Cookie 등을 활용하기 때문이다.
+HTTP프로토콜은 요청 시 연결이 생성되고, 응답 후 연결이 끊어진다
+따라서 Cookie를 통해 상태를 저장하고 세션을 유지하게된다.
+
+Tomcat Container의 경우, Session에 대해서 JSESSIONID를 발급한다.
+클라이언트는 Header에 쿠키값을 넣고 이를통해 서버에 요청하며, 서버는 세션 메모리에 값들을 유지한다.
+
+Q. 도메인이 다르게될경우, Session유지???
 ```
 
 ---
