@@ -10,6 +10,8 @@
 8. [TIME_WAIT와 TCP_Slow_start](#p8)
 9. [http1.0과 http1.1에서의 keep-alive 사용법](#p9)
 10. [Latency와 bandwidth란? 그리고 웹 성능을 높이려면?](#p10)
+11. [Loadbalancer의 분배방식과 특징은?](#p11)
+12. [Sticky Session과 Session Clustering의 의미와 차이는?](#p12)
 
 ---
 
@@ -156,6 +158,41 @@ bandwidth는 단위시간 동안 한지점에서 다른지점으로 전달될 �
 
 ---
 
+## 11. Loadbalancer의 분배방식과 특징은?
+#### p11
+```
+loadbalancer는 클라이언트의 request들을 WAS로 분배하는 역활을 수행
+라운드로빈
+리스트 컨넥션
+리스트 리스펀스 타임
+리스트 밴드위스
+해싱 메소드
+```
+
+---
+
+## 12. Session Clustering ?
+#### p11
+```
+Session 관리가 필요한 이유는 A서버의 세션을 생성한 뒤, C서버로 요청하게되는경우 JSESSIONID가 다르기때문에 다시 Session을 생성해야하는 경우가 생기기때문이다. 예를들면 로그인같은경우다.
+따라서 Session 관리방법은 2가지로 Sticky Session과 Session Clustering이다.
+
+Sticky Session은 특정 세션의 요청이 request에 응답을 준 Server에서만 처리하게하는 것이다.
+일반적으로 Cookie를 사용하거나, 클라이언트의 IP Tracking을 통해 진행한다.
+- AWS ELB는 Cookie를 사용
+- HTTP Response의 cookie를 이용
+- 해당 클라이언트가 가는 EC2 Instance의 정보를 저장해놓는다.
+
+단점은 특정 서버 Fail 시, 해당 서버에 붙어있는 세션들이 소실될 수 있으며, 특정서버만 과부하가 올 수 있음
+
+Session Clustering은 여러 WAS의 세션을 동일한 세션으로 관리하는 것이다.
+- Cluster로 하나로 관리하는 것
+새로운 서버가 하나 뜰때마다 새로운 서버의 IP/PORT를 입력해서, 클러스터링 해줘야한다.
+Redis를 이용해서 진행가능하다.
+```
+
+---
+
 ## Reference
 [[10분 테코톡] 👩‍🦰희봉의 웹서버 vs WAS](https://youtu.be/NyhbNtOq0Bc).
 
@@ -166,3 +203,5 @@ bandwidth는 단위시간 동안 한지점에서 다른지점으로 전달될 �
 [[10분 테코톡] 🍪쿠기의 Connection Pool & Keep-Alive](https://youtu.be/MBgEhSUOlXo).
 
 [[10분 테코톡] 🎙️효오의 Latency & Bandwidth](https://youtu.be/mFBIwEhvZUY)
+
+[[10분 테코톡] 🐻마틴의 Sticky session & Session Clustering](https://youtu.be/gzKf2BTZToQ)
