@@ -9,6 +9,7 @@
 7. Connection Pool(#p7)
 8. TIME_WAIT와 TCP_Slow_start(#p8)
 9. http1.0과 http1.1에서의 keep-alive 사용법(#p9)
+10.
 
 ---
 
@@ -140,6 +141,21 @@ HTTP/1.1은 지속커넥션이다.
 
 ---
 
+## 10. Latency와 bandwidth란? 그리고 웹 성능을 높이려면?
+#### p10
+```
+latency는하나의 데이터 패킷이 한 지점에서 다른 지점으로 전송되어 이에 소요되는 시간이다. 시간단위는 ms이다.
+bandwidth는 단위시간 동안 한지점에서 다른지점으로 전달될 수 있는 최대 데이터양이다. 대역폭(BPS)이라고도 한다.
+대역폭은 높이고, 지연성은 낯춘다.
+지연성을 낯추는 방법으로는
+1. 클라이언트와 서버의 거리를 단축시킨다.
+2. 브라우저 캐시 구성한다.
+3. 적은 리소스를 로드한다.
+그 외 대역폭의 경우, 제한설정을 강제로 높인다.
+```
+
+---
+
 ## Reference
 [[10분 테코톡] 👩‍🦰희봉의 웹서버 vs WAS](https://youtu.be/NyhbNtOq0Bc).
 
@@ -149,3 +165,4 @@ HTTP/1.1은 지속커넥션이다.
 
 [[10분 테코톡] 🍪쿠기의 Connection Pool & Keep-Alive](https://youtu.be/MBgEhSUOlXo).
 
+[[10분 테코톡] 🎙️효오의 Latency & Bandwidth](https://youtu.be/mFBIwEhvZUY)
