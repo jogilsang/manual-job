@@ -13,6 +13,7 @@
 11. [Loadbalancer의 분배방식과 특징은?](#p11)
 12. [Sticky Session과 Session Clustering의 의미와 차이는?](#p12)
 13. [JSESSIONKEY란?](#p13)
+14. [TLS와 SSL의 차이, 프로세스는?](#p14)
 
 ---
 
@@ -209,6 +210,19 @@ Q. 도메인이 다르게될경우, Session유지???
 
 ---
 
+## 14. TLS와 SSL의 차이, 프로세스는?
+#### p14
+```
+TLS(Transport Layer Security)는 데이터 암호화 관련내용으로 상대방과 미리 주고받은 key로 응용계층에서 전송계층으로 암호화해서 전달하고, 전송계층에서 응용계층으로 복호화되어 전달되는 것이다.
+Message는 key값과 MAC(Message Authentication Code)이 포함되어 전달된다.
+
+HTTPS 기반의 TCP 443 포트이다.
+예전에 SSL이 있었고 SSL 3.0이, TLS 1.0으로 변환되었다. 
+암호화(Encryption)와 인증(Authentication), 무결성(Integrity)의 특징이있다.
+```
+
+---
+
 ## Reference
 [[10분 테코톡] 👩‍🦰희봉의 웹서버 vs WAS](https://youtu.be/NyhbNtOq0Bc).
 
@@ -221,3 +235,5 @@ Q. 도메인이 다르게될경우, Session유지???
 [[10분 테코톡] 🎙️효오의 Latency & Bandwidth](https://youtu.be/mFBIwEhvZUY)
 
 [[10분 테코톡] 🐻마틴의 Sticky session & Session Clustering](https://youtu.be/gzKf2BTZToQ)
+
+[[10분 테코톡] 👶에단의 TLS](https://youtu.be/EPcQqkqqouk)   
