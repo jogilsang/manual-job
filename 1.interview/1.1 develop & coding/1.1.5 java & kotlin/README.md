@@ -23,6 +23,7 @@
 17. [프로가드에 대해 설명해보세요](#p17)
 18. [ADB는 뭔가요](#p18)
 19. [파이어베이스란](#p19)
+20. [String, StringBuilder, StringBuffer ???](#p20)
 
 ---
 
@@ -236,6 +237,17 @@ apk파일을 디컴파일하게되면, 소스코드가 보일수있습니다.
 ```java
 데이터베이스의 특징이나 종류를 몰라도, 잘 접속할수있다.
 sql쿼리를 string으로 작성해야한다.
+```
+
+---
+## 21. String, StringBuilder, StringBuffer
+```java
+String 객체는 한번 생성되면 할당된 공간이 변하지 않지만 StringBuffer나 StringBuilder의 경우 객체의 공간이 부족해지는 경우 버퍼의 크기를 유연하게 늘려줍니다. 
+이러한 특징을 일컬어 String은 불변(immutable)하고 StringBuffer와 StringBuilder는 가변(mutable)하다라고 합니다.
+StringBuilder는 단일 스레드 환경에 적합하고, StringBuffer는 멀티스레드 환경에 적합합니다.
+StringBuilder가 StringBuffer보다는 빠르다.
+문자열 변경하는 작업이 많을경우, StringBuffer을 사용하는 것이 좋다.
+buffer크기를 설정해줘야하기때문에, 초기에는 String보다는 느리다
 ```
 ---
 
