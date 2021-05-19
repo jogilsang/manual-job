@@ -27,7 +27,7 @@ Develop study and job interview preparation
 ---
 
 ## 3. reference
-
+- [jetbrains 통계](https://www.jetbrains.com/lp/devecosystem-2020/)
 ---
 
 
