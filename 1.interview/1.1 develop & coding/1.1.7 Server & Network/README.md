@@ -223,6 +223,25 @@ HTTPS 기반의 TCP 443 포트이다.
 
 ---
 
+## 15. DNS의 통신구조와 질의과정 프로세스는?
+#### p15
+```
+DNS를 사용하는 이유는 ip가 아닌 도메인이름으로만으로 접속이 가능하게 하기때문이다.
+DNS 통신구조는 localhost에서 첫번째로 hosts 파일 접근 후, 도메인정보가 있는지 확인한다.
+두번째는 DNS(Domain Name Server)에 접근해서, 도메인 정보가 있는지 확인한다.
+DNS Query에 대한 Data Section은 세 가지이다.
+첫번째는 Query name String으로, 일반적인 도메인주소다
+두번째는 Type으로, A (Address)와 NS (Name Server)다. A에 대한 응답은 IP이며, NS에 대한 응답은 NameServer 주소다.
+세번째는 Class로 IN (인터넷) 고정이다.
+
+host는 Public DNS(KT, SKT, LG U+, Google)에 질의를 하게된다.
+해당 Public DNS는 자체적으로 도메인정보가 담긴 Record가 없으며, 다른 DNS에 질의를 한다.
+첫번째로 Root name Server(.kr, .com)에 질의를 해서, Top Level Domain - NS 서버주소 (EX : naver.com)를 받아온다.
+두번째로 Top level Doamin에 질의를 해서, 그 외 하위 레벨 도메인정보를 질의를 반복하고 최종적으로 IP를 받아서, host에게 전달한다.
+```
+
+---
+
 ## Reference
 [[10분 테코톡] 👩‍🦰희봉의 웹서버 vs WAS](https://youtu.be/NyhbNtOq0Bc).
 
@@ -237,3 +256,5 @@ HTTPS 기반의 TCP 443 포트이다.
 [[10분 테코톡] 🐻마틴의 Sticky session & Session Clustering](https://youtu.be/gzKf2BTZToQ)
 
 [[10분 테코톡] 👶에단의 TLS](https://youtu.be/EPcQqkqqouk)   
+
+[[10분 테코톡] 🧑‍💻🧑‍💻동글&라면의 DNS](https://youtu.be/5rBzHoR4F2A)   
