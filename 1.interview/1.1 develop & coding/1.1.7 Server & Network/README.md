@@ -14,6 +14,7 @@
 12. [Sticky Session과 Session Clustering의 의미와 차이는?](#p12)
 13. [JSESSIONKEY란?](#p13)
 14. [TLS와 SSL의 차이, 프로세스는?](#p14)
+15. [DNS의 통신구조와 질의과정 프로세스는?](#p15)
 
 ---
 
