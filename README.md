@@ -8,7 +8,7 @@ Develop study and job interview preparation
 
 [1.1.1 SW & CS](https://github.com/jogilsang/manual-job/tree/master/1.interview/1.1%20develop%20%26%20coding/1.1.1%20SW%20%26%20CS).
 
-[1.1.2 Regex](https://github.com/jogilsang/manual-job/tree/master/1.interview/1.1%20develop%20%26%20coding/1.1.2%20regex).
+[1.1.2 Regex](https://github.com/jogilsang/manual-job/tree/master/1.interview/1.1%20develop%20%26%20coding/1.1.2%20Regex).
 
 [1.1.3 Android & IOS](https://github.com/jogilsang/manual-job/tree/master/1.interview/1.1%20develop%20%26%20coding/1.1.3%20Android%20%26%20IOS).
 
